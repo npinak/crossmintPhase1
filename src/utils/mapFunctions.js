@@ -1,7 +1,7 @@
 import axios from "axios";
-import { candidateId, baseURL } from "./constants";
-import { wait } from "./utility";
-import { createPolyanets, deletePolyanets } from "./polyanets";
+import { candidateId, baseURL } from "./constants.js";
+import { wait } from "./utility.js";
+import { createPolyanets, deletePolyanets } from "./polyanets.js";
 
 export const getMap = async () => {
   const response = await axios

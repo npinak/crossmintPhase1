@@ -1,4 +1,4 @@
-import { candidateId, baseURL } from "./constants";
+import { candidateId, baseURL } from "./constants.js";
 
 export const createPolyanets = (row, column) => {
   axios
