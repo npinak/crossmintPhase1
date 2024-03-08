@@ -1,11 +1,17 @@
 import { candidateId, baseURL } from "./constants.js";
+import axios from "axios";
 
 export const createPolyanets = (row, column) => {
   axios
     .post(`${baseURL}/polyanets`, {
-      candidateId,
-      row,
-      column,
+      header: {
+        "Content-Type": "application/json",
+      },
+      body: {
+        candidateId,
+        row,
+        column,
+      },
     })
     .catch((err) => console.error(err));
 };
@@ -13,6 +19,9 @@ export const createPolyanets = (row, column) => {
 export const deletePolyanets = (row, column) => {
   axios
     .delete(`${baseURL}/polyanets`, {
+      headers: {
+        "Content-Type": "application/json",
+      },
       data: {
         candidateId,
         row,
